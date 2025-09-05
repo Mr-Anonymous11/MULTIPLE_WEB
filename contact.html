@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Portfolio - Contact</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 220px; height: 100%;
+      background-color: #111;
+      padding: 1.5rem 1rem;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    }
+    .logo-text { font-size: 1.6rem; font-weight: bold; color: #6363e7; text-align: center; margin-bottom: 8px; }
+    .logo-image { text-align: center; margin-bottom: 20px; }
+    .logo-image img { width: 70px; border-radius: 50%; border: 2px solid #6363e7; }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li { margin: 12px 0; }
+    .sidebar ul li a {
+      color: #ddd; text-decoration: none; display: block;
+      padding: 8px; border-radius: 4px; font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active { background-color: #6363e7; color: #fff; }
+
+    /* Main */
+    .main-content {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .contact-box {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      max-width: 800px;
+      width: 100%;
+    }
+    .contact-box h2 { text-align: center; color: #6363e7; margin-bottom: 15px; }
+    .intro { text-align: center; font-size: 0.95rem; color: #bbb; margin-bottom: 20px; }
+
+    form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+    input, textarea {
+      width: 100%; padding: 12px;
+      border: none; border-radius: 8px;
+      background: #2a2a2a; color: #fff; font-size: 1rem;
+    }
+    input:focus, textarea:focus { outline: 2px solid #6363e7; }
+    textarea { resize: vertical; min-height: 100px; }
+
+    .btn {
+      background: #6363e7; color: #fff; padding: 12px;
+      border: none; border-radius: 30px;
+      cursor: pointer; font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #7070e2; }
+
+    /* Contact Info */
+    .contact-info { margin: 20px 0; font-size: 0.9rem; color: #bbb; }
+    .contact-info p { margin: 5px 0; }
+
+    .social-links {
+      margin: 15px 0; text-align: center;
+    }
+    .social-links a {
+      color: #6363e7; margin: 0 8px;
+      font-size: 1.3rem; text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-links a:hover { color: #7070e2; }
+
+    /* Map */
+    .map {
+      margin: 20px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    /* FAQ */
+    .faq { margin-top: 25px; }
+    .faq h3 { color: #6363e7; margin-bottom: 10px; }
+    .faq-item { margin-bottom: 10px; }
+    .faq-item strong { color: #fff; display: block; margin-bottom: 4px; }
+
+    /* CV Button */
+    .download-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #6363e7;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .download-btn:hover { background: #7070e2; }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Nav -->
+  <aside class="sidebar">
+    <div class="logo-text">Chris</div>
+    <div class="logo-image">
+      <img src="logo.jpg" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="market.html">Market</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="contact-box">
+      <h2>Contact Me</h2>
+      <p class="intro">Let’s get in touch! Fill out the form or reach me directly using the info below.</p>
+
+      <!-- Form -->
+      <form action="mailto:clashingclash562@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your full name" required>
+        <input type="email" name="Email" placeholder="Your email address" required>
+        <textarea name="Message" placeholder="Your message here..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <!-- Info -->
+      <div class="contact-info">
+        <p><strong>Email:</strong> clashingclash562@gmail.com</p>
+        <p><strong>Phone:</strong> 099* *** ***</p>
+        <p><strong>Location:</strong> Philippines</p>
+      </div>
+
+      <!-- Social -->
+      <div class="social-links">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📷</a>
+        <a href="#">💼</a>
+      </div>
+
+      <!-- Map -->
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798899299!2d-74.2598756874135!3d40.69767006450192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzU0LjYiTiA3NMKwMTUnMjAuOSJX!5e0!3m2!1sen!2sph!4v1632200000000!5m2!1sen!2sph"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <strong>What services do you offer?</strong>
+          <span>I build websites, portfolios, and help with digital design.</span>
+        </div>
+        <div class="faq-item">
+          <strong>How soon can you reply?</strong>
+          <span>I usually respond within 24 hours.</span>
+        </div>
+        <div class="faq-item">
+          <strong>Do you work remotely?</strong>
+          <span>Yes, I am available for both local and international projects.</span>
+        </div>
+      </div>
+
+      <!-- CV -->
+      <div style="text-align:center;">
+        <a href="resume.pdf" class="download-btn">📄 Download My CV</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

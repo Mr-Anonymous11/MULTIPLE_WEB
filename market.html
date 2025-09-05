@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Market</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      display: flex;
+      scroll-behavior: smooth;
+    }
+  
+    .sidebar {
+      position: fixed; top: 0; left: 0;
+      width: 250px; height: 100%;
+      background-color: #111;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    }
+    .logo-text {
+      font-size: 1.8rem; font-weight: bold;
+      color: #6363e7; text-align: center; margin-bottom: 10px;
+    }
+    .logo-image { text-align: center; margin-bottom: 30px; }
+    .logo-image img { width: 80px; border-radius: 50%; border: 2px solid #6363e7; }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li { margin: 20px 0; }
+    .sidebar ul li a {
+      color: #ddd; text-decoration: none; display: block;
+      padding: 10px; transition: background 0.3s; border-radius: 4px;
+    }
+    .sidebar ul li a:hover { background-color: #6363e7; color: #fff; }
+    .download-btn {
+      background-color: #6363e7; color: #fff;
+      text-decoration: none; padding: 10px 20px;
+      border-radius: 20px; display: block; text-align: center;
+      margin-top: 20px; transition: background 0.3s;
+    }
+    .download-btn:hover { background-color: #7070e2; }
+
+
+    .cart-sidebar {
+      position: fixed; right: 0; top: 0;
+      width: 300px; height: 100%; background: #111;
+      box-shadow: -4px 0 12px rgba(0,0,0,0.5);
+      padding: 20px; overflow-y: auto;
+    }
+    .cart-sidebar h2 { color: #6363e7; margin-bottom: 20px; text-align: center; }
+    .cart-item {
+      background: #222; padding: 10px; border-radius: 8px;
+      margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .cart-item p { margin: 0; }
+    .remove-btn {
+      background: red; color: #fff; border: none;
+      padding: 5px 10px; border-radius: 6px; cursor: pointer;
+    }
+    .checkout-btn {
+      display: block; width: 100%; text-align: center;
+      margin-top: 20px; padding: 12px; border-radius: 30px;
+      background: #6363e7; color: white; font-weight: bold;
+      text-decoration: none; transition: background 0.3s;
+    }
+    .checkout-btn:hover { background: #7070e2; }
+
+  
+    .main-content {
+      margin-left: 250px; margin-right: 300px; padding: 20px;
+      width: calc(100% - 550px);
+    }
+    .market-hero {
+      background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+      padding: 60px; border-radius: 12px; text-align: center;
+      margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+    .market-hero h1 { font-size: 3rem; color: #6363e7; margin-bottom: 15px; }
+    .market-hero p { font-size: 1.2rem; color: #ccc; }
+    .section-title { text-align: center; font-size: 2rem; margin: 40px 0 20px; color: #6363e7; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: #222; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(99, 99, 231, 0.5);
+    }
+    .product-card img { width: 100%; height: 180px; object-fit: cover; }
+    .product-info { padding: 15px; text-align: center; }
+    .product-info h3 { margin-bottom: 10px; color: #fff; }
+    .price { font-size: 1.1rem; color: #9b95ff; margin-bottom: 12px; }
+    .add-btn {
+      display: inline-block; background: #6363e7; color: #fff;
+      padding: 8px 18px; border-radius: 30px; font-weight: bold;
+      cursor: pointer; transition: background 0.3s; border: none;
+    }
+    .add-btn:hover { background: #7070e2; }
+
+    .footer {
+      text-align: center; padding: 20px; background: #111;
+      color: #bbb; margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo-text">Chris</div>
+    <div class="logo-image"><img src="logo.jpg" alt="Logo" /></div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="market.html">Market</a></li>
+    </ul>
+ 
+  </aside>
+
+
+  <div class="main-content">
+    <section class="market-hero">
+      <h1>Welcome to Chris Market</h1>
+      <p>Explore premium digital products, designs, and creative assets.</p>
+    </section>
+
+    <h2 class="section-title">Resume Templates</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="res.jpg"><div class="product-info"><h3>Modern Resume</h3><p class="price">$5</p><button class="add-btn" onclick="addToCart('Modern Resume', 5)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="res1.jpg"><div class="product-info"><h3>Creative Resume</h3><p class="price">$7</p><button class="add-btn" onclick="addToCart('Creative Resume', 7)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="res2.jpg"><div class="product-info"><h3>Professional Resume</h3><p class="price">$6</p><button class="add-btn" onclick="addToCart('Professional Resume', 6)">Add to Cart</button></div></div>
+    </div>
+
+    <h2 class="section-title">Designs</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="logo.jpg"><div class="product-info"><h3>Logo Design</h3><p class="price">$12</p><button class="add-btn" onclick="addToCart('Logo Design', 12)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="poster.jpg"><div class="product-info"><h3>Poster Design</h3><p class="price">$10</p><button class="add-btn" onclick="addToCart('Poster Design', 10)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="flyer.png"><div class="product-info"><h3>Flyer Design</h3><p class="price">$8</p><button class="add-btn" onclick="addToCart('Flyer Design', 8)">Add to Cart</button></div></div>
+    </div>
+
+  
+    <h2 class="section-title">Layouts</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="port.jpg"><div class="product-info"><h3>Portfolio Layout</h3><p class="price">$15</p><button class="add-btn" onclick="addToCart('Portfolio Layout', 15)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="dash.jpg"><div class="product-info"><h3>Dashboard Layout</h3><p class="price">$18</p><button class="add-btn" onclick="addToCart('Dashboard Layout', 18)">Add to Cart</button></div></div>
+    </div>
+
+    <h2 class="section-title">Scripts</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="script.jpeg"><div class="product-info"><h3>Form Validation Script</h3><p class="price">$10</p><button class="add-btn" onclick="addToCart('Form Validation Script', 10)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="slider.png"><div class="product-info"><h3>Image Slider Script</h3><p class="price">$12</p><button class="add-btn" onclick="addToCart('Image Slider Script', 12)">Add to Cart</button></div></div>
+    </div>
+
+    <h2 class="section-title">Mods</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="game.png"><div class="product-info"><h3>Game UI Mod</h3><p class="price">$20</p><button class="add-btn" onclick="addToCart('Game UI Mod', 20)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="mod.jpg"><div class="product-info"><h3>Theme Mod Pack</h3><p class="price">$22</p><button class="add-btn" onclick="addToCart('Theme Mod Pack', 22)">Add to Cart</button></div></div>
+    </div>
+
+ 
+    <h2 class="section-title">Systems</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="inven.jpg"><div class="product-info"><h3>Inventory System</h3><p class="price">$50</p><button class="add-btn" onclick="addToCart('Inventory System', 50)">Add to Cart</button></div></div>
+      <div class="product-card"><img src="sale.jpeg"><div class="product-info"><h3>Point of Sale System</h3><p class="price">$75</p><button class="add-btn" onclick="addToCart('POS System', 75)">Add to Cart</button></div></div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 Chris Market. All rights reserved.</p>
+    </footer>
+  </div>
+  
+
+
+  <aside class="cart-sidebar">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total" style="text-align:center; margin-top:10px; font-weight:bold;"></div>
+    <a href="checkoutinforform.html" class="checkout-btn">Checkout</a>
+  </aside>
+
+  <script>
+    let cart = [];
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      renderCart();
+    }
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+    function renderCart() {
+      const cartContainer = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      cartContainer.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        cartContainer.innerHTML += `
+          <div class="cart-item">
+            <p>${item.product} - $${item.price}</p>
+            <button class="remove-btn" onclick="removeFromCart(${index})">X</button>
+          </div>
+        `;
+      });
+      cartTotal.textContent = "Total: $" + total.toFixed(2);
+    }
+  </script>
+</section>
+
+</body>
+</html>

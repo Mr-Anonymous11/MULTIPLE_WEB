@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Portfolio - Hobbies</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      display: flex;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #111;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #6363e7;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo-image {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-image img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      border: 2px solid #6363e7;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      color: #ddd;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+      background-color: #6363e7;
+      color: #fff;
+    }
+
+    .download-btn {
+      background-color: #6363e7;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #7070e2;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      padding: 20px;
+    }
+
+    .hobbies {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .hobbies h2 {
+      font-size: 2.3rem;
+      margin-bottom: 25px;
+      color: #6c63ff;
+      text-shadow: 0 0 12px rgba(108, 99, 255, 0.5);
+      animation: fadeInDown 0.8s ease-in-out;
+    }
+
+    .hobbies ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .hobbies li {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      font-size: 1.1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #ddd;
+      box-shadow: 0 0 8px rgba(108, 99, 255, 0.2);
+    }
+
+    .hobbies li:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 12px 24px rgba(108, 99, 255, 0.45);
+      background: linear-gradient(145deg, #333, #222);
+      color: #fff;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo-text">Chris</div>
+    <div class="logo-image">
+      <img src="logo.jpg" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="hobbies.html" class="active">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="market.html">Market</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-content">
+    <section class="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li><strong>Coding:</strong> Exploring new programming languages and building small projects.</li>
+        <li><strong>Chess:</strong> Playing chess to enhance strategic thinking and patience.</li>
+        <li><strong>Making Up Strategies:</strong> Developing game and business strategies for fun and learning.</li>
+        <li><strong>Layout Making:</strong> Designing page layouts and UI concepts.</li>
+        <li><strong>Reading:</strong> Diving into tech blogs, novels, and motivational books.</li>
+        <li><strong>Gaming:</strong> Enjoying various video games as a way to relax and connect with friends.</li>
+        <li><strong>Photography:</strong> Capturing moments and experimenting with photo editing.</li>
+        <li><strong>Music Production:</strong> Creating beats and mixing tracks during free time.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

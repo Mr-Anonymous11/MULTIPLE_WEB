@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Chris Portfolio</title>
+  <style>
+    body {
+      margin: 0; font-family: Arial, sans-serif;
+      background: #1e1e1e; color: #f5f5f5;
+      display: flex; justify-content: center; align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: #111; padding: 40px;
+      border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      width: 100%; max-width: 400px; text-align: center;
+    }
+    h2 {
+      color: #6363e7; margin-bottom: 20px;
+    }
+    input {
+      width: 100%; padding: 12px; margin: 10px 0;
+      border: none; border-radius: 8px; background: #2a2a2a;
+      color: #fff; font-size: 1rem;
+    }
+    input:focus {
+      outline: 2px solid #6363e7;
+    }
+    .btn {
+      background: #6363e7; color: #fff;
+      padding: 12px; border: none;
+      border-radius: 30px; width: 100%;
+      cursor: pointer; font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #7070e2; }
+    .extra {
+      margin-top: 15px; font-size: 0.9rem;
+    }
+    .extra a {
+      color: #6363e7; text-decoration: none;
+    }
+    .extra a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+    <div class="extra">
+      <p>Already have an account? <a href="index.html">Login</a></p>
+    </div>
+  </div>
+</body>
+</html>

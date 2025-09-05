@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Chris Portfolio</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      display: flex;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #111;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #6363e7;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo-image {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-image img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      border: 2px solid #6363e7;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      color: #ddd;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #6363e7;
+      color: #fff;
+    }
+
+    .download-btn {
+      background-color: #6363e7;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #7070e2;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      padding: 20px;
+    }
+
+    .gallery-section {
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover .gallery-info {
+      opacity: 1;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #bbb;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo-text">Chris</div>
+    <div class="logo-image">
+      <img src="logo.jpg" alt="Logo" />
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="market.html">Market</a></li>
+    </ul>
+  </aside>
+
+  <div class="main-content">
+    <section class="gallery-section">
+      <h2 class="section-title">My Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="first.jpg" alt="Project 1" /><div class="gallery-info">Layout</div></div>
+        <div class="gallery-item"><img src="second.jpg" alt="Project 2" /><div class="gallery-info">Hardware</div></div>
+        <div class="gallery-item"><img src="third.jpg" alt="Project 3" /><div class="gallery-info">Programmer</div></div>
+        <div class="gallery-item"><img src="fourth.jpg" alt="Project 4" /><div class="gallery-info">Web design</div></div>
+        <div class="gallery-item"><img src="mid.jpg" alt="Project 5" /><div class="gallery-info">Ethical hacking</div></div>
+        <div class="gallery-item"><img src="seventh.jpg" alt="Project 6" /><div class="gallery-info">Scripter</div></div>
+        <div class="gallery-item"><img src="fifth.jpg" alt="Project 7" /><div class="gallery-info">Hardware Maintenance</div></div>
+        <div class="gallery-item"><img src="eight.png" alt="Project 8" /><div class="gallery-info">Game development</div></div>
+        <div class="gallery-item"><img src="nine.jpg" alt="Project 9" /><div class="gallery-info">Cyber Security</div></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Chris Portfolio. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
