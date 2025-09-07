@@ -128,6 +128,142 @@ body {
   text-align: center; padding: 20px;
   background: #111; color: #bbb; margin-top: 30px;
 }
+
+
+
+/* ======================= */
+/* 📱 Responsive Styling 📱 */
+/* ======================= */
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-shadow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .logo-image {
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin: 0;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: 12px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+    
+
+
+
+
+    
   </style>
 </head>
 <body>
@@ -203,3 +339,4 @@ body {
 </body>
 
 </html>
+
