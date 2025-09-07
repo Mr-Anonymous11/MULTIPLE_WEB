@@ -110,6 +110,101 @@
       text-align: center; padding: 20px; background: #111;
       color: #bbb; margin-top: 30px;
     }
+
+
+
+
+/* Responsive for Market Page */
+@media (max-width: 1024px) {
+  /* Stack sidebars vertically on tablets */
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0.5rem;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 10px;
+  }
+  .sidebar ul li {
+    margin: 5px 0;
+  }
+  .sidebar ul li a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    margin: 0;
+    width: 100%;
+    padding: 15px 10px 40px; /* extra bottom padding for cart below */
+  }
+
+  .cart-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 15px 10px 30px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-direction: column;
+  }
+  .sidebar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sidebar ul li a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .market-hero {
+    padding: 40px 15px;
+  }
+
+  .product-card img {
+    height: 140px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .add-btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+}
+    
+
+
+
+
+
+
+
+    
   </style>
 </head>
 <body>
@@ -220,4 +315,5 @@
 </section>
 
 </body>
+
 </html>
