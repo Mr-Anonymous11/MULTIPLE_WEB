@@ -194,4 +194,127 @@
       padding: 20px;
       color: #999;
       font-size: 0.9rem;
+
     }
+
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    flex: 1 1 100%;
+  }
+
+  .logo-image {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin: 5px 0;
+  }
+
+  .sidebar ul li a {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    margin: 10px auto 0 auto;
+    width: fit-content;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .profile-bio {
+    margin-top: 20px;
+  }
+
+  .personal-info th, .personal-info td {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+  }
+
+  .more-about ul {
+    padding-left: 15px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image img {
+    width: 150px;
+  }
+
+  .profile-bio h2 {
+    font-size: 1.4rem;
+  }
+
+  .profile-bio p {
+    font-size: 1rem;
+  }
+
+  .more-about h3 {
+    font-size: 1.3rem;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.85rem;
+  }
+}
