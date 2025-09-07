@@ -148,6 +148,100 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
+
+
+/* ======================= */
+/* 📱 Responsive Styling 📱 */
+/* ======================= */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-shadow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .logo-image {
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin: 0;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: 12px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .hobbies {
+    padding: 30px 15px;
+    margin: 20px auto;
+    max-width: 95%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.85rem;
+  }
+
+  .hobbies {
+    padding: 20px 10px;
+    margin: 15px auto;
+  }
+}
+    
+
+
+
+
+    
+
   </style>
 </head>
 <body>
@@ -184,3 +278,4 @@
   </div>
 </body>
 </html>
+
