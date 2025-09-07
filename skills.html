@@ -149,6 +149,133 @@
       to { width: var(--width); }
     }
 
+
+
+
+
+/* ======================= */
+/* 📱 Responsive Styling 📱 */
+/* ======================= */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-shadow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .logo-image {
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin: 0;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: 12px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .skills {
+    padding: 30px 10px;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .skill-bar {
+    width: 100%;
+    height: 22px;
+    border-radius: 14px;
+  }
+
+  .skill-bar-fill {
+    font-size: 0.9rem;
+    padding-right: 10px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sidebar ul li a {
+    font-size: 0.85rem;
+  }
+
+  .skills h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills p {
+    font-size: 0.95rem;
+  }
+
+  .skill-bar {
+    height: 20px;
+  }
+
+  .skill-bar-fill {
+    font-size: 0.8rem;
+    line-height: 20px;
+    padding-right: 8px;
+  }
+}
+    
+
+
+
+
+    
+
   </style>
 </head>
 <body>
@@ -214,3 +341,4 @@
 
 </body>
 </html>
+
